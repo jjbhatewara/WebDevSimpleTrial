@@ -46,9 +46,8 @@ app.get('/getData',(request,response)=>{
       //response.render('Students',{title:'Student details', items: rows})
     } 
   });
-  
 });
 
-app.listen("5000", ()=> console.log("app is running"));
+app.listen("5000", ()=> console.log("app is running on PORT 5000"));
 
 module.exports.data = data;
