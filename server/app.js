@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const { request, response } = require('express');
 //dotenv.config();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended : false}));
 var db = require('./dbService');
+app.set('view engine', 'ejs');
+
 const connection = db.connect();
 const data = {
   headers:['ID','Name','Roll','branch'],
@@ -27,6 +31,8 @@ app.post('/insert/:name/:roll/:branch',(req,res,next) => {
     });
 });
 
+
+
 app.get('/getData',(request,response)=>{
   //console.log("hello");
   var getQuery = 'SELECT * FROM `basic_name_roll` ';
@@ -34,8 +40,9 @@ app.get('/getData',(request,response)=>{
     if(!err){
       data.rows = rows;
       response.json(rows);
+      //response.render('')
       console.log("Displayed");
-      //console.log(rows[0]);
+      //console.log(rows);
       //response.render('Students',{title:'Student details', items: rows})
     } 
   });

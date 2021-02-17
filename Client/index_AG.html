@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="b.css">
+    <title>Simple Doc</title>
+</head>
+
+<body>
+
+    <div class="container bg-secondary font-weight-bold" id="cs">
+        <h1 display-1>Forms</h1>
+        <form action="">
+            <div class="form-group">
+                <div id="l1">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="input-name-btn" placeholder="Enter full name" required>
+                </div>
+                <div id="l2">
+                    <label>Roll no</label>
+                    <input type="text" class="form-control" id="input-roll-btn" placeholder="Enter complete rollno."
+                        required>
+                </div>
+                <!-- <br><br> -->
+                <div id="l3">
+                    <label>Branch</label>
+
+                    <!--  <select class="form-control" id="input-branch-btn">
+                <option>Computer</option>
+                <option>IT</option>
+                <option>ENTC</option>
+            </select> -->
+
+                    <input id="input-branch-btn" list="branch-drpdn" type="text" class="form-control">
+                    <datalist id="branch-drpdn">
+                        <option value="COMP"></option>
+                        <option value="IT"></option>
+                        <option value="ENTC"></option>
+                    </datalist>
+                </div>
+
+                <br><br>
+                <button class="btn btn-primary" type="submit" id="Submit">Submit</button>
+
+                <a href='./Display.html'><button class="btn btn-primary" type="button" id='displayRecords'>Display Records</button></a>
+                <!-- http://localhost:5000/getData -->
+            </div>
+        </form>
+        <script src="index.js"></script>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
