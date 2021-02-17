@@ -1,0 +1,2 @@
+"INSERT INTO `basic_name_roll` (`ID`, `Name`, `Roll`, `branch`) VALUES ('3', 'Ironman', '12', 'COMP')";
+http://localhost:5000/getData

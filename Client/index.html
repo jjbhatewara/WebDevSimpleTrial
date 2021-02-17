@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Doc</title>
+</head>
+<body>
+    <label >Name</label>
+    <input type="text" id="input-name-btn">
+    <br><br>
+    <label >Roll no</label>
+    <input type="text" id="input-roll-btn">
+    <br><br>
+    <label>Branch</label>
+    <input id="input-branch-btn" list="branch-drpdn" type="text">
+    <datalist id="branch-drpdn">
+        <option value="COMP"></option>
+        <option value="IT"></option>
+        <option value="ENTC"></option>
+    </datalist>
+    <br><br>
+    <button id="Submit">ADD</button>
+    <a href='http://localhost:5000/getData' ><button id='displayRecords'>Display Records</button></a>
+    <!-- ./Display.html -->
+    <script src="index.js"></script>
+</body>
+</html>
