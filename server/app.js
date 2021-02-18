@@ -65,11 +65,11 @@ app.get('/getData',(request,response)=>{
    var getQuery = 'SELECT * FROM `basic_name_roll` ';
   connection.query(getQuery,(err,rows,fields)=>{
     if(!err){
-      data.rows = rows;
-      //response.json(rows);
-      response.render('C:/Users/Aditya/Desktop/TY/Other/Project managment learning/12-2-21 simple databasee/Client/EJS.ejs',{ rows : rows } );
+      data.rows = rows;  
+      //response.json(rows);  ../Client/EJS.ejs C:/Users/Aditya/Desktop/TY/Other/Project managment learning/12-2-21 simple databasee/Client/EJS.ejs
+      response.render('C:/Users/Aditya/Desktop/TY/Other/Project managment learning/12-2-21 simple databasee/Client/Display.ejs',{ rows : rows } );
       console.log("Displayed");
-      console.log(rows);
+      //console.log(rows);
     } 
   }); 
 });
@@ -77,3 +77,4 @@ app.get('/getData',(request,response)=>{
 app.listen("5000", ()=> console.log("app is running on PORT 5000"));
 
 module.exports.data = data;
+
