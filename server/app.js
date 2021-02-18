@@ -67,7 +67,8 @@ app.get('/getData',(request,response)=>{
     if(!err){
       data.rows = rows;  
       //response.json(rows);  ../Client/EJS.ejs C:/Users/Aditya/Desktop/TY/Other/Project managment learning/12-2-21 simple databasee/Client/EJS.ejs
-      response.render('C:/Users/Aditya/Desktop/TY/Other/Project managment learning/12-2-21 simple databasee/Client/Display.ejs',{ rows : rows } );
+      var ejsFilePath = 'C:/Users/Aditya/Desktop/TY/Other/Project managment learning/12-2-21 simple databasee/Client/Display.ejs'
+      response.render(ejsFilePath ,{ rows : rows } );
       console.log("Displayed");
       //console.log(rows);
     } 
@@ -76,5 +77,5 @@ app.get('/getData',(request,response)=>{
 
 app.listen("5000", ()=> console.log("app is running on PORT 5000"));
 
-module.exports.data = data;
+/* module.exports.data = data; */
 
