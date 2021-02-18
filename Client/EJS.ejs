@@ -15,8 +15,7 @@
     <title>Display</title>
 </head>
 <body>
-    <h1>Records in mySql Database</h1>
-
+    <h1> Records in mySql Database </h1>
     <table id="table">
         <thead>
             <tr>
@@ -26,12 +25,20 @@
             <th>BRANCH</th>
             </tr>
         </thead>
+
         <tbody>
-            
+            <% rows.forEach(function(row){ %>
+                <tr>
+                <th> <%= row.ID %> </th>
+                <th> <%= row.Name %> </th>
+                <th> <%= row.Roll %> </th>
+                <th> <%= row.branch %> </th>
+                </tr>
+            <% }); %>
         </tbody>
 
     </table>
     </main>
-    <script src="display.js"  ></script>
+    <!-- <script src="display.js"  ></script> -->
 </body>
 </html>
