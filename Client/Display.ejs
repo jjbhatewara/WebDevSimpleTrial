@@ -39,7 +39,6 @@
 <body> 
     <br><br><br><br>
     </main>
-    <script src="display.js"  ></script>
     <div class="container bg-info font-weight-bold" id="cs">
         <h1>Records in mySql Database</h1>
 
@@ -50,6 +49,8 @@
                     <th scope="col">NAME</th>
                     <th scope="col">ROLL NUMBER</th>
                     <th scope="col">BRANCH</th>
+                    <!-- <th scope="col">EDIT</th> -->
+                    <th scope="col">DELETE</th> 
                 </tr>
             </thead>
             <tbody>
@@ -59,16 +60,20 @@
                     <th> <%= row.Name %> </th>
                     <th> <%= row.Roll %> </th>
                     <th> <%= row.branch %> </th>
+                   <!--  <th> <a href="http://127.0.0.1:5500/Client/edit.html">  <button type="button" id = 'editBtn'>EDIT</button> </a> </th>  -->
+                    <!-- <th><button type="button" id = 'editBtn' onclick="location.reload();" >EDIT</button></th> -->
+                    <th> <button id="delBtn" onclick="fetch('http://localhost:5000/delete/<%= row.ID %>' ,{method:'POST'});" ondblclick="location.reload(); ">DELETE</button> </th> 
                     </tr>
                 <% }); %>
             </tbody>
 
         </table>
+        
         </main>
-        <!-- <script src="display.js"></script> -->
+        
     </div>
 
-
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

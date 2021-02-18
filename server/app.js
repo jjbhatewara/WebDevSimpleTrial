@@ -49,6 +49,17 @@ app.post('/insert/:name/:roll/:branch',(req,res,next) => {
       }
     });
 });
+//delete
+
+app.post('/delete/:id',(req,res,next) =>{
+  var deleteQuery = "DELETE FROM `basic_name_roll` WHERE `basic_name_roll`.`ID` = ? ";
+  connection.query(deleteQuery,[req.params.id],(err,rows,field)=> {
+    if(!err){
+      console.log("Deleted");
+    }
+  } )
+})
+
 
 
 
